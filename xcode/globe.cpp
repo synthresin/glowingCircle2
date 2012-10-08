@@ -22,6 +22,7 @@ Globe::Globe() {
     mPerlin = Perlin();
     mNoise = true;
     mLive = true;
+    mFlow = true;
     
 }
 Globe::Globe(ci::Vec3f center, float radius) {
@@ -60,7 +61,9 @@ void Globe::draw() {
             if (mNoise) {
                 float noise = (mPerlin.fBm(Vec3f(currentX, currentY, app::getElapsedSeconds())) + 4) / 5;
                 gl::drawSphere(locationVec * noise, 5.0f);
-            } else {
+            } else if (true) {
+                gl::drawSphere(locationVec, 5.0f);
+            }else {
                 gl::drawSphere(locationVec, 5.0f);
             }
             

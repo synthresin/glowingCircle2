@@ -27,6 +27,8 @@ class Globe {
     bool        mLive;
     bool        mAscend;
     
+    bool        mFlow;
+    
 public: 
     Globe();
     Globe(ci::Vec3f center, float radius);

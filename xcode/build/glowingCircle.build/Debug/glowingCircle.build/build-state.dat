@@ -5050,7 +5050,7 @@ t1349600969
 s1568
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app
-t1349600024
+t1349600973
 s102
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Info.plist
@@ -5058,8 +5058,8 @@ t1346124352
 s1238
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle
-t1349600024
-s7808880
+t1349600973
+s7808852
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/PkgInfo
 t1346124352
@@ -5074,8 +5074,8 @@ t1349600023
 s363832
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/globe.o
-t2
-s0
+t1349600972
+s363796
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircle.LinkFileList
 c00000000507146CA0000000000000125
@@ -5083,8 +5083,8 @@ t1349600970
 s293
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o
-t1349600023
-s373648
+t1349600972
+s373624
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/CinderApp.icns
 c00000000503C3937000000000001BEB5
@@ -5105,6 +5105,11 @@ N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/globe.cpp
 c000000005071469400000000000007ED
 t1349600916
 s2029
+
+N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/globe.h
+c000000005071466A00000000000002E0
+t1349600874
+s736
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/glowingCircle_Prefix.pch
 c00000000503C39370000000000000093
@@ -5150,7 +5155,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese700e94a7e21b641^9c8bf74a7e21b641^---0#1#0#--18"Check dependencies36"40BFA337-64A0-481A-BF59-B29055800B35-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesfa43d7af8221b641^5c56e5af8221b641^---0#1#0#--18"Check dependencies36"4AA29D94-604E-49F3-8698-DE5C6E4A9DB7-
 
 CCompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/circle.o /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/circle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s367845255.270979
