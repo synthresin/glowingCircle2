@@ -2,6 +2,7 @@
 #include "cinder/gl/gl.h"
 #include "cinder/Vector.h"
 #include "cinder/Camera.h"
+#include "cinder/params/Params.h"
 #include "globe.h"
 
 #define APP_WIDTH 1280
@@ -26,20 +27,56 @@ class glowingCircleApp : public AppBasic {
     Vec3f mUp;
     Vec3f mEye;
     Vec3f mTarget;
-    Globe mGlobe;
+    
+    //Perspective variables
+    float mFov, mRatio, mNear, mFar;
+    
+    float mUpX, mUpY, mUpZ;
+    float mEyeX, mEyeY, mEyeZ;
+    float mTargetX, mTargetY, mTargetZ;
     float mXRot,mYRot,mZRot;
+    
+    Globe mGlobe;
+    
+    params::InterfaceGl mParams;
 };
 
 void glowingCircleApp::setup()
 {
+    // set up Perspective variables
+    mFov = 100.0f;
+    mRatio = getWindowAspectRatio();
+    mNear = 5.0f;
+    mFar = 2000.0f;
+    
+    //mUp Variables
+    mUpX = 0.0f;
+    mUpY = 1.0f;
+    mUpZ = 0.0f;
+    
+    //mEye variables
+    
+    mEyeX = 0.0f;
+    mEyeY = 0.0f;
+    mEyeZ = 500.0f;
+    
+    
+    //mTarget variables
+    mTargetX = 0.0f;
+    mTargetY = 0.0f;
+    mTargetZ = 0.0f;
+    
+    
     setWindowSize(APP_WIDTH, APP_HEIGHT);
     setWindowPos(50, 50);
     
-    mCam.setPerspective(100.0f, getWindowAspectRatio(), 5.0f, 2000.0f);
+    mCam.setPerspective(mFov, mRatio, mNear, mFar);
     
-    mUp = Vec3f::yAxis();
-    mEye = Vec3f(0.0, 0.0, 500.0f);
-    mTarget = Vec3f::zero();
+//    mUp = Vec3f::yAxis();
+//    mEye = Vec3f(0.0, 0.0, 500.0f);
+//    mTarget = Vec3f::zero();
+    
+    
     
     
     mGlobe = Globe();
@@ -60,6 +97,10 @@ void glowingCircleApp::keyDown( KeyEvent event )
 
 void glowingCircleApp::update()
 {
+    mUp = Vec3f(mUpX,mUpY,mUpZ);
+    mEye = Vec3f(mEyeX, mEyeY, mEyeZ);
+    mTarget = Vec3f(mTargetX, mTargetY, mTargetZ);
+    
     mCam.lookAt(mEye, mTarget, mUp);
     gl::setMatrices(mCam);
 
