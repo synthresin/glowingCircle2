@@ -769,5 +769,6 @@ dependencies: \
   ../../../boost/boost/math/special_functions/fpclassify.hpp \
   ../../../boost/boost/math/tools/real_cast.hpp \
   ../../../boost/boost/detail/lcast_precision.hpp \
+  ../../../include/cinder/gl/Fbo.h \
   /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/globe.h \
   ../../../include/cinder/Perlin.h

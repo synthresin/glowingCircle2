@@ -5,6 +5,7 @@
 #include "cinder/params/Params.h"
 #include "cinder/qtime/MovieWriter.h"
 #include "cinder/Utilities.h"
+#include "cinder/gl/Fbo.h"
 #include "globe.h"
 
 #define APP_WIDTH 1920
@@ -22,6 +23,7 @@ class glowingCircleApp : public AppBasic {
 	void setup();
 	void mouseDown( MouseEvent event );
     void keyDown( KeyEvent event );
+    void renderSceneToFbo();
 	void update();
 	void draw();
     
@@ -45,6 +47,8 @@ class glowingCircleApp : public AppBasic {
     
     qtime::MovieWriter mMovie;
     bool    mSaveFrame;
+    
+    gl::Fbo     mFbo;
 };
 
 void glowingCircleApp::prepareSettings(Settings *settings)
@@ -106,6 +110,9 @@ void glowingCircleApp::setup()
     //fs::path path = getSaveFilePath();
     //mMovie = qtime::MovieWriter(path, 640, 480);
     mSaveFrame = false;
+    
+    gl::enableAlphaBlending();
+    mFbo = gl::Fbo( APP_WIDTH, APP_HEIGHT );
 }
 
 void glowingCircleApp::mouseDown( MouseEvent event )
@@ -126,6 +133,24 @@ void glowingCircleApp::keyDown( KeyEvent event )
     }
 }
 
+void glowingCircleApp::renderSceneToFbo()
+{
+    mFbo.bindFramebuffer();
+    gl::setViewport( mFbo.getBounds() );
+    CameraPersp cam( mFbo.getWidth(), mFbo.getHeight(), 60.0f );
+    cam.setPerspective(mFov, mRatio, mNear, mFar);
+    cam.lookAt(mEye, mTarget, mUp);
+    gl::setMatrices( cam );
+    gl::clear( ColorA( 0, 0, 0, 0 ) );
+    glDisable( GL_TEXTURE_2D );
+    gl::pushMatrices();
+    gl::rotate(Vec3f(mXRot,mYRot,mZRot));
+    mGlobe.draw();
+    gl::popMatrices();
+    
+    mFbo.unbindFramebuffer();
+}
+
 void glowingCircleApp::update()
 {
     mCam.setPerspective(mFov, mRatio, mNear, mFar);
@@ -134,34 +159,48 @@ void glowingCircleApp::update()
     mTarget = Vec3f(mTargetX, mTargetY, mTargetZ);
     
     mCam.lookAt(mEye, mTarget, mUp);
-    gl::setMatrices(mCam);
+    //gl::setMatrices(mCam);
 
 
     mXRot += 0.1;
     mYRot += 0.1;
     mZRot += 0.1;
     
+    
     mGlobe.update();
+    
+    renderSceneToFbo();
     
 }
 
 void glowingCircleApp::draw()
 {
 	// clear out the window with black
-	gl::clear( ColorA( 0, 0, 0, 0 ) );
-    
+	
+    gl::clear( ColorA( 1, 0, 0 ) );
     //gl::drawSphere(Vec3f(0,0,0), 40.0f);
-    gl::pushMatrices();
-    gl::rotate(Vec3f(mXRot,mYRot,mZRot));
-    mGlobe.draw();
-    gl::popMatrices();
+    
+//    gl::pushMatrices();
+//    gl::rotate(Vec3f(mXRot,mYRot,mZRot));
+//    mGlobe.draw();
+//    gl::popMatrices();
+    
+    glEnable( GL_TEXTURE_2D );
+	//mFbo.bindTexture();
+    
+    gl::draw( mFbo.getTexture() );
     
     //params::InterfaceGl::draw();
     
     //mMovie.addFrame( copyWindowSurface() );
+//    if(mSaveFrame) {
+//        writeImage( getHomeDirectory().string() + "/myImage/image_" + toString( getElapsedFrames() ) + ".png",
+//                   copyWindowSurface() );
+//    }
+    
     if(mSaveFrame) {
         writeImage( getHomeDirectory().string() + "/myImage/image_" + toString( getElapsedFrames() ) + ".png",
-                   copyWindowSurface() );
+                   mFbo.getTexture() );
     }
 }
 
