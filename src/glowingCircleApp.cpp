@@ -135,6 +135,7 @@ void glowingCircleApp::keyDown( KeyEvent event )
 
 void glowingCircleApp::renderSceneToFbo()
 {
+    gl::pushMatrices();
     mFbo.bindFramebuffer();
     gl::setViewport( mFbo.getBounds() );
     CameraPersp cam( mFbo.getWidth(), mFbo.getHeight(), 60.0f );
@@ -145,20 +146,22 @@ void glowingCircleApp::renderSceneToFbo()
     glDisable( GL_TEXTURE_2D );
     gl::pushMatrices();
     gl::rotate(Vec3f(mXRot,mYRot,mZRot));
+    gl::color(1.0, 1.0, 1.0);
     mGlobe.draw();
     gl::popMatrices();
     
     mFbo.unbindFramebuffer();
+    gl::popMatrices();
 }
 
 void glowingCircleApp::update()
 {
-    mCam.setPerspective(mFov, mRatio, mNear, mFar);
+    //mCam.setPerspective(mFov, mRatio, mNear, mFar);
     mUp = Vec3f(mUpX,mUpY,mUpZ);
     mEye = Vec3f(mEyeX, mEyeY, mEyeZ);
     mTarget = Vec3f(mTargetX, mTargetY, mTargetZ);
     
-    mCam.lookAt(mEye, mTarget, mUp);
+    //mCam.lookAt(mEye, mTarget, mUp);
     //gl::setMatrices(mCam);
 
 
@@ -176,8 +179,9 @@ void glowingCircleApp::update()
 void glowingCircleApp::draw()
 {
 	// clear out the window with black
+    
 	
-    gl::clear( ColorA( 1, 0, 0 ) );
+    gl::clear( ColorA( 0, 0, 0 ) );
     //gl::drawSphere(Vec3f(0,0,0), 40.0f);
     
 //    gl::pushMatrices();
@@ -189,7 +193,8 @@ void glowingCircleApp::draw()
 	//mFbo.bindTexture();
     
     gl::draw( mFbo.getTexture() );
-    
+    gl::color(0.5, 0.8, 0.6);
+    gl::drawSolidCircle(Vec2f::zero(), 50.0f);
     //params::InterfaceGl::draw();
     
     //mMovie.addFrame( copyWindowSurface() );
