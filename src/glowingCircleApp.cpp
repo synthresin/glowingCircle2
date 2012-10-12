@@ -44,7 +44,7 @@ class glowingCircleApp : public AppBasic {
 void glowingCircleApp::setup()
 {
     // set up Perspective variables
-    mFov = 100.0f;
+    mFov = 70.0f;
     mRatio = getWindowAspectRatio();
     mNear = 5.0f;
     mFar = 2000.0f;
@@ -77,10 +77,16 @@ void glowingCircleApp::setup()
 //    mTarget = Vec3f::zero();
     
     // SETUPS PARAMS
-	mParams = params::InterfaceGl( "Flocking", Vec2i( 200, 240 ) );
+	mParams = params::InterfaceGl( "Circle", Vec2i( 200, 240 ) );
 	mParams.addSeparator();
     mParams.addParam( "Fov", &mFov, "min=50.0 max=140.0 step=5.0 keyIncr=z keyDecr=Z" );
-    
+    mParams.addParam( "eye x", &mEyeX, "min=-500.0 max=500.0 step=10.0 keyIncr=c keyDecr=C" );
+    mParams.addParam( "eye y", &mEyeY, "min=-500.0 max=500.0 step=10.0 keyIncr=v keyDecr=V" );
+    mParams.addParam( "eye z", &mEyeZ, "min=-500.0 max=500.0 step=10.0 keyIncr=b keyDecr=B" );
+    mParams.addSeparator();
+    mParams.addParam( "target x", &mTargetX, "min=-500.0 max=500.0 step=10.0 keyIncr=d keyDecr=D" );
+    mParams.addParam( "target y", &mTargetY, "min=-500.0 max=500.0 step=10.0 keyIncr=f keyDecr=F" );
+    mParams.addParam( "target z", &mTargetZ, "min=-500.0 max=500.0 step=10.0 keyIncr=g keyDecr=G" );
     
     
     
@@ -122,7 +128,7 @@ void glowingCircleApp::update()
 void glowingCircleApp::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) );
+	gl::clear( Color( 1, 0, 0 ) );
     
     //gl::drawSphere(Vec3f(0,0,0), 40.0f);
     gl::pushMatrices();
