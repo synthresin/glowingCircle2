@@ -21,7 +21,7 @@ Globe::Globe() {
     mFragSize = 5.0f;
     mPerlin = Perlin();
     mNoise = true;
-    mLive = true;
+    mLive = false;
     mFlow = true;
     
 }

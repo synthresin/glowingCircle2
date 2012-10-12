@@ -70,11 +70,16 @@ void glowingCircleApp::setup()
     setWindowSize(APP_WIDTH, APP_HEIGHT);
     setWindowPos(50, 50);
     
-    mCam.setPerspective(mFov, mRatio, mNear, mFar);
+    
     
 //    mUp = Vec3f::yAxis();
 //    mEye = Vec3f(0.0, 0.0, 500.0f);
 //    mTarget = Vec3f::zero();
+    
+    // SETUPS PARAMS
+	mParams = params::InterfaceGl( "Flocking", Vec2i( 200, 240 ) );
+	mParams.addSeparator();
+    mParams.addParam( "Fov", &mFov, "min=50.0 max=140.0 step=5.0 keyIncr=z keyDecr=Z" );
     
     
     
@@ -97,6 +102,7 @@ void glowingCircleApp::keyDown( KeyEvent event )
 
 void glowingCircleApp::update()
 {
+    mCam.setPerspective(mFov, mRatio, mNear, mFar);
     mUp = Vec3f(mUpX,mUpY,mUpZ);
     mEye = Vec3f(mEyeX, mEyeY, mEyeZ);
     mTarget = Vec3f(mTargetX, mTargetY, mTargetZ);
@@ -123,6 +129,7 @@ void glowingCircleApp::draw()
     gl::rotate(Vec3f(mXRot,mYRot,mZRot));
     mGlobe.draw();
     gl::popMatrices();
+    params::InterfaceGl::draw();
 }
 
 CINDER_APP_BASIC( glowingCircleApp, RendererGl )
