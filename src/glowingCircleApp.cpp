@@ -148,7 +148,7 @@ void glowingCircleApp::update()
 void glowingCircleApp::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) );
+	gl::clear( ColorA( 0, 0, 0, 0 ) );
     
     //gl::drawSphere(Vec3f(0,0,0), 40.0f);
     gl::pushMatrices();
@@ -160,7 +160,7 @@ void glowingCircleApp::draw()
     
     //mMovie.addFrame( copyWindowSurface() );
     if(mSaveFrame) {
-        writeImage( getHomeDirectory().string() + "image_" + toString( getElapsedFrames() ) + ".png",
+        writeImage( getHomeDirectory().string() + "/myImage/image_" + toString( getElapsedFrames() ) + ".png",
                    copyWindowSurface() );
     }
 }
