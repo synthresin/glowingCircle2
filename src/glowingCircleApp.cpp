@@ -135,7 +135,7 @@ void glowingCircleApp::keyDown( KeyEvent event )
 
 void glowingCircleApp::renderSceneToFbo()
 {
-    gl::pushMatrices();
+    //gl::pushMatrices();
     mFbo.bindFramebuffer();
     gl::setViewport( mFbo.getBounds() );
     CameraPersp cam( mFbo.getWidth(), mFbo.getHeight(), 60.0f );
@@ -151,7 +151,7 @@ void glowingCircleApp::renderSceneToFbo()
     gl::popMatrices();
     
     mFbo.unbindFramebuffer();
-    gl::popMatrices();
+    //gl::popMatrices();
 }
 
 void glowingCircleApp::update()
@@ -189,12 +189,16 @@ void glowingCircleApp::draw()
 //    mGlobe.draw();
 //    gl::popMatrices();
     
-    glEnable( GL_TEXTURE_2D );
+    ;
 	//mFbo.bindTexture();
-    
-    gl::draw( mFbo.getTexture() );
     gl::color(0.5, 0.8, 0.6);
     gl::drawSolidCircle(Vec2f::zero(), 50.0f);
+    glEnable( GL_TEXTURE_2D );
+    gl::setMatricesWindow( getWindowSize() );
+    gl::color(1.0, 1.0, 1.0);
+    gl::draw( mFbo.getTexture() );
+    
+    
     //params::InterfaceGl::draw();
     
     //mMovie.addFrame( copyWindowSurface() );
