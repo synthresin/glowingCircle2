@@ -3,10 +3,12 @@
 #include "cinder/Vector.h"
 #include "cinder/Camera.h"
 #include "cinder/params/Params.h"
+#include "cinder/qtime/MovieWriter.h"
+#include "cinder/Utilities.h"
 #include "globe.h"
 
-#define APP_WIDTH 1280
-#define APP_HEIGHT 800
+#define APP_WIDTH 1920
+#define APP_HEIGHT 1080
 
 using namespace ci;
 using namespace ci::app;
@@ -16,6 +18,7 @@ using namespace std;
 
 class glowingCircleApp : public AppBasic {
   public:
+    void prepareSettings(Settings *settings);
 	void setup();
 	void mouseDown( MouseEvent event );
     void keyDown( KeyEvent event );
@@ -39,7 +42,15 @@ class glowingCircleApp : public AppBasic {
     Globe mGlobe;
     
     params::InterfaceGl mParams;
+    
+    qtime::MovieWriter mMovie;
+    bool    mSaveFrame;
 };
+
+void glowingCircleApp::prepareSettings(Settings *settings)
+{
+    settings->setWindowSize(APP_WIDTH, APP_HEIGHT);
+}
 
 void glowingCircleApp::setup()
 {
@@ -67,7 +78,6 @@ void glowingCircleApp::setup()
     mTargetZ = 0.0f;
     
     
-    setWindowSize(APP_WIDTH, APP_HEIGHT);
     setWindowPos(50, 50);
     
     
@@ -93,6 +103,9 @@ void glowingCircleApp::setup()
     mGlobe = Globe();
 
     mGlobe.disableNoise();
+    //fs::path path = getSaveFilePath();
+    //mMovie = qtime::MovieWriter(path, 640, 480);
+    mSaveFrame = false;
 }
 
 void glowingCircleApp::mouseDown( MouseEvent event )
@@ -102,7 +115,14 @@ void glowingCircleApp::mouseDown( MouseEvent event )
 void glowingCircleApp::keyDown( KeyEvent event )
 {
     if (event.getChar() == 'a') {
-        mGlobe.toggleNoise();
+        //mGlobe.toggleNoise();
+        setWindowSize(APP_WIDTH, APP_HEIGHT);
+    } else if (event.getChar() == 'q') {
+        if (mSaveFrame) {
+            mSaveFrame = false;
+        } else {
+            mSaveFrame = true;
+        }
     }
 }
 
@@ -137,6 +157,12 @@ void glowingCircleApp::draw()
     gl::popMatrices();
     
     //params::InterfaceGl::draw();
+    
+    //mMovie.addFrame( copyWindowSurface() );
+    if(mSaveFrame) {
+        writeImage( getHomeDirectory().string() + "image_" + toString( getElapsedFrames() ) + ".png",
+                   copyWindowSurface() );
+    }
 }
 
 CINDER_APP_BASIC( glowingCircleApp, RendererGl )
