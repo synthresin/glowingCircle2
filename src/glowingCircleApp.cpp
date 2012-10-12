@@ -128,14 +128,15 @@ void glowingCircleApp::update()
 void glowingCircleApp::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 1, 0, 0 ) );
+	gl::clear( Color( 0, 0, 0 ) );
     
     //gl::drawSphere(Vec3f(0,0,0), 40.0f);
     gl::pushMatrices();
     gl::rotate(Vec3f(mXRot,mYRot,mZRot));
     mGlobe.draw();
     gl::popMatrices();
-    params::InterfaceGl::draw();
+    
+    //params::InterfaceGl::draw();
 }
 
 CINDER_APP_BASIC( glowingCircleApp, RendererGl )
