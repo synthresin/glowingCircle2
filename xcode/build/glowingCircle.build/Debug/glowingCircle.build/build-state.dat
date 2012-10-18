@@ -3,9 +3,9 @@ v5
 r1
 cCheck dependencies
 cProcessInfoPlistFile /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Info.plist Info.plist
-cCpResource ../resources/blurVs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl
-cCpResource CinderApp.icns ./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icns
 cCpResource blurFs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl
+cCpResource CinderApp.icns ./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icns
+cCpResource ../resources/blurVs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl
 cProcessPCH++ /var/folders/rx/5920lwf5777bzm51lrsn28900000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/glowingCircle_Prefix-hcxmtfjmfahsazgwmkxxoecakdnb/glowingCircle_Prefix.pch.pth glowingCircle_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/globe.o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/globe.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
@@ -6637,17 +6637,17 @@ t1336782579
 s15428
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../resources/blurVs.glsl
-c00000000507F8B9B0000000000000054
-t1350536091
+c00000000507FC3250000000000000054
+t1350550309
 s84
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp
-c00000000507F89470000000000001659
-t1350535495
-s5721
+c00000000507FCEF1000000000000178F
+t1350553329
+s6031
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app
-t1350536097
+t1350552189
 s102
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Info.plist
@@ -6655,7 +6655,7 @@ t1346124352
 s1238
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle
-t1350536097
+t1350552189
 s7900936
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/PkgInfo
@@ -6667,11 +6667,11 @@ t1346124352
 s114357
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl
-t1350535422
-s54
+t1350552186
+s330
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl
-t1350536094
+t1350552186
 s84
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/circle.o
@@ -6688,8 +6688,8 @@ t1349600970
 s293
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o
-t1350536096
-s705652
+t1350552189
+s705500
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/CinderApp.icns
 c00000000503C3937000000000001BEB5
@@ -6697,9 +6697,9 @@ t1346124087
 s114357
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/blurFs.glsl
-c00000000507F88F90000000000000036
-t1350535417
-s54
+c00000000507FCB3100000000000009D7
+t1350552369
+s2519
 
 N/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/circle.cpp
 c00000000506C664C00000000000007FE
@@ -6765,7 +6765,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd369552bc32fb641^63d0552bc32fb641^---0#1#0#--18"Check dependencies36"9FF6D08C-D255-443D-AD8D-99573E5478E8-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese541ee7b0630b641^357dee7b0630b641^---0#1#0#--18"Check dependencies36"6ADE1900-4E37-4CBD-A173-AAA9B5ADCF48-
 
 CCompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/circle.o /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/circle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s367845255.270979
@@ -6824,8 +6824,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/../src/glowingCircleApp.cpp0d1b8ddfb6ecb541^884633e1b6ecb541^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/../src/glowingCircleApp.cpp0000000000000000^2994"CompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o ../src/glowingCircleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-generated-files.hmap -I/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-own-target-headers.hmap -I/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-all-target-headers.hmap -iquote /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-project-headers.hmap -iquote../../../include -iquote../include -I/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/build/Debug/include -I../../../boost -I/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/DerivedSources/i386 -I/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/DerivedSources -F/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/build/Debug -include /var/folders/rx/5920lwf5777bzm51lrsn28900000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/glowingCircle_Prefix-dxcxsoujeolmufexflsmlywwvedi/glowingCircle_Prefix.pch -MMD -MT dependencies -MF /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.d --serialize-diagnostics /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.dia -c /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/../src/glowingCircleApp.cpp -o /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o36"220CAA93-BED3-49D7-85E5-1F7FE8E67861-
 
 CCompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s372228894.574170
-e372228897.019865
+s372246139.992822
+e372246142.439037
 r1
 xCompileC
 x./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o
@@ -6834,16 +6834,16 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp42ed931ec32fb641^fd160521c32fb641^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp0000000000000000^3008"CompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o ../src/glowingCircleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-generated-files.hmap -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-own-target-headers.hmap -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-all-target-headers.hmap -iquote /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-project-headers.hmap -iquote../../../include -iquote../include -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug/include -I../../../boost -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/DerivedSources/i386 -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/DerivedSources -F/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug -include /var/folders/rx/5920lwf5777bzm51lrsn28900000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/glowingCircle_Prefix-hcxmtfjmfahsazgwmkxxoecakdnb/glowingCircle_Prefix.pch -MMD -MT dependencies -MF /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.d --serialize-diagnostics /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.dia -c /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp -o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o36"29174051-D35F-4903-B221-41AF97517D1D-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp253ffe7b0630b641^cb64707e0630b641^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp0000000000000000^3008"CompileC ./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o ../src/glowingCircleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-generated-files.hmap -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-own-target-headers.hmap -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-all-target-headers.hmap -iquote /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/glowingCircle-project-headers.hmap -iquote../../../include -iquote../include -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug/include -I../../../boost -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/DerivedSources/i386 -I/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/DerivedSources -F/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug -include /var/folders/rx/5920lwf5777bzm51lrsn28900000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/glowingCircle_Prefix-hcxmtfjmfahsazgwmkxxoecakdnb/glowingCircle_Prefix.pch -MMD -MT dependencies -MF /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.d --serialize-diagnostics /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.dia -c /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../src/glowingCircleApp.cpp -o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircleApp.o36"A906D177-0598-4BFA-B75D-F7E47DFF2A52-
 
 CCpResource ../resources/blurVs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl
-s372228894.547972
-e372228894.550289
+s372244986.433087
+e372244986.440202
 r1
 xCpResource
 x../resources/blurVs.glsl
 x./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsld55a8c1ec32fb641^dc2d8d1ec32fb641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl0000000000000000^471"CpResource ../resources/blurVs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../resources/blurVs.glsl /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources36"E46C1CEA-4E7F-4796-94BF-19DA82F14358-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsle1f06efa0130b641^6f1075fa0130b641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl0000000000000000^471"CpResource ../resources/blurVs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurVs.glsl    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/../resources/blurVs.glsl /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources36"341AC832-6F8E-4E3B-A533-99D4A47B1625-
 
 CCpResource CinderApp.icns ./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icns
 s367817152.290195
@@ -6855,13 +6855,13 @@ x./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icns
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy ./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icnscd564ac071ecb541^40dc51c071ecb541^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icns000000000080d041^451"CpResource CinderApp.icns ./build/Debug/glowingCircle.app/Contents/Resources/CinderApp.icns    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/CinderApp.icns /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app/Contents/Resources36"A3E038EF-6D7B-4B57-8E67-60FB4F9CA6A1-
 
 CCpResource blurFs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl
-s372228222.794402
-e372228222.797829
+s372246139.976176
+e372246139.978109
 r1
 xCpResource
 xblurFs.glsl
 x./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy ./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsldf8bcb7ec02fb641^8e40cc7ec02fb641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl000000000080d041^445"CpResource blurFs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/blurFs.glsl /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources36"3FB8065E-4A9B-4A3E-B394-426E38B2FDE0-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy ./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsla1f8f97b0630b641^cea7fa7b0630b641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl0000000000000000^445"CpResource blurFs.glsl ./build/Debug/glowingCircle.app/Contents/Resources/blurFs.glsl    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/blurFs.glsl /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/Resources36"DAD4B602-6CB3-4D1C-BE2C-164A5F81BF19-
 
 CLd /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle normal i386
 s367845256.084895
@@ -6874,14 +6874,14 @@ xi386
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Link /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle89cf1588dfecb541^38157588dfecb541^---0#0#0#--1097"Ld ./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle normal i386    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/build/Debug -F/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/build/Debug -filelist /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircle.LinkFileList -mmacosx-version-min=10.5 ../../..//lib/libcinder_d.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle36"3BCF96D9-778D-41BD-8B89-E954B08D79BC-
 
 CLd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle normal i386
-s372228897.026869
-e372228897.351301
+s372246142.445524
+e372246142.803122
 r1
 xLd
 x/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Link /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle6bf40621c32fb641^c8ef5921c32fb641^---0#0#0#--1102"Ld ./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle normal i386    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug -F/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug -filelist /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircle.LinkFileList -mmacosx-version-min=10.5 ../../..//lib/libcinder_d.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle36"C3BEC821-EBB7-4F97-B6E4-82632C3C77BD-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Link /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCirclea721727e0630b641^319acd7e0630b641^---0#0#0#--1102"Ld ./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle normal i386    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug -F/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/build/Debug -filelist /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/glowingCircle.build/Debug/glowingCircle.build/Objects-normal/i386/glowingCircle.LinkFileList -mmacosx-version-min=10.5 ../../..//lib/libcinder_d.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app/Contents/MacOS/glowingCircle36"DBE831A5-CED4-4351-941F-89CE42E92F91-
 
 CProcessInfoPlistFile /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app/Contents/Info.plist Info.plist
 s367817152.279636
@@ -6968,10 +6968,10 @@ x/Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowing
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Touch /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app7c7b6f88dfecb541^761a7588dfecb541^---0#0#0#--215"Touch ./build/Debug/glowingCircle.app    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode    /usr/bin/touch -c /Users/synthresin/Desktop/cinder/apps/glowingCircle/xcode/./build/Debug/glowingCircle.app36"EF5AAC8C-C249-45A4-BC83-65CD8F36640A-
 
 CTouch /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app
-s372228897.359383
-e372228897.385936
+s372246142.810835
+e372246142.825098
 r1
 xTouch
 x/Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Touch /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app2ac65d21c32fb641^f7cc6221c32fb641^---0#0#0#--217"Touch ./build/Debug/glowingCircle.app    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    /usr/bin/touch -c /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app36"CA3EE607-D154-4729-84E3-379243A2547B-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Touch /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app27a2cf7e0630b641^583ad37e0630b641^---0#0#0#--217"Touch ./build/Debug/glowingCircle.app    cd /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode    /usr/bin/touch -c /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/./build/Debug/glowingCircle.app36"D6112182-5039-4AE1-B539-DACDE84B6659-
 

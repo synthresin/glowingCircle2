@@ -163,9 +163,7 @@ void glowingCircleApp::renderSceneToFbo()
     gl::rotate(Vec3f(mXRot,mYRot,mZRot));
     gl::color(1.0, 1.0, 1.0);
     
-    mBlurShader.bind();
     mGlobe.draw();
-    mBlurShader.unbind();
     
     gl::popMatrices();
     
@@ -215,7 +213,21 @@ void glowingCircleApp::draw()
     glEnable( GL_TEXTURE_2D );
     gl::setMatricesWindow( getWindowSize() );
     gl::color(1.0, 1.0, 1.0);
-    gl::draw( mFbo.getTexture() );
+
+    gl::Texture currentTexture = mFbo.getTexture();
+    currentTexture.bind(0);
+    
+    mBlurShader.bind();
+    mBlurShader.uniform("sigma", 5.0f);
+    mBlurShader.uniform("blurSize", 1.0f/APP_WIDTH);
+    mBlurShader.uniform("blurSampler", 0);
+    
+    //gl::draw( mFbo.getTexture() );
+    gl::drawSolidRect(getWindowBounds());
+    
+    mBlurShader.unbind();
+    
+    currentTexture.unbind();
     
     
     //params::InterfaceGl::draw();

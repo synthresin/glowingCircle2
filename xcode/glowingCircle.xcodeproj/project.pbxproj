@@ -43,8 +43,8 @@
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* glowingCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glowingCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6BF7E5C162FC044000EF357 /* blurVs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = blurVs.glsl; path = ../resources/blurVs.glsl; sourceTree = "<group>"; };
-		C6BF7E5F162FC050000EF357 /* blurFs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blurFs.glsl; sourceTree = "<group>"; };
+		C6BF7E5C162FC044000EF357 /* blurVs.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = blurVs.glsl; path = ../resources/blurVs.glsl; sourceTree = "<group>"; };
+		C6BF7E5F162FC050000EF357 /* blurFs.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = blurFs.glsl; sourceTree = "<group>"; };
 		C6CF5BF815EC736D004CBA5E /* globe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globe.cpp; sourceTree = "<group>"; };
 		C6CF5BF915EC736D004CBA5E /* globe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
