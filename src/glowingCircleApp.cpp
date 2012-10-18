@@ -52,6 +52,8 @@ class glowingCircleApp : public AppBasic {
     
     gl::Fbo         mFbo;
     gl::GlslProg    mBlurShader;
+    
+    float			mAngle;
 };
 
 void glowingCircleApp::prepareSettings(Settings *settings)
@@ -128,6 +130,8 @@ void glowingCircleApp::setup()
 	catch( ... ) {
 		std::cout << "Unable to load shader" << std::endl;
 	}
+    
+    mAngle = 0.0f;
 }
 
 void glowingCircleApp::mouseDown( MouseEvent event )
@@ -163,6 +167,7 @@ void glowingCircleApp::renderSceneToFbo()
     gl::rotate(Vec3f(mXRot,mYRot,mZRot));
     gl::color(1.0, 1.0, 1.0);
     
+    
     mGlobe.draw();
     
     gl::popMatrices();
@@ -189,6 +194,8 @@ void glowingCircleApp::update()
     
     mGlobe.update();
     
+    mAngle += 0.05f;
+    
     renderSceneToFbo();
     
 }
@@ -210,24 +217,24 @@ void glowingCircleApp::draw()
 	//mFbo.bindTexture();
 //    gl::color(0.5, 0.8, 0.6);
 //    gl::drawSolidCircle(Vec2f::zero(), 50.0f);
-    glEnable( GL_TEXTURE_2D );
-    gl::setMatricesWindow( getWindowSize() );
+    //glEnable( GL_TEXTURE_2D );
+    gl::setMatricesWindow( getWindowSize() ); // 기본 신더 좌표로 되돌림.
     gl::color(1.0, 1.0, 1.0);
+    
 
-    gl::Texture currentTexture = mFbo.getTexture();
-    currentTexture.bind(0);
+    //gl::draw( mFbo.getTexture() ); // 기존 코드.
     
+    gl::Texture currentSceneTex = mFbo.getTexture();
+    currentSceneTex.enableAndBind();
     mBlurShader.bind();
-    mBlurShader.uniform("sigma", 5.0f);
-    mBlurShader.uniform("blurSize", 1.0f/APP_WIDTH);
-    mBlurShader.uniform("blurSampler", 0);
-    
-    //gl::draw( mFbo.getTexture() );
-    gl::drawSolidRect(getWindowBounds());
-    
+    mBlurShader.uniform( "tex0", 0 );
+	mBlurShader.uniform( "sampleOffset", Vec2f( cos( mAngle ), sin( mAngle ) ) * ( 3.0f / getWindowWidth() ) );
+    mBlurShader.uniform( "sOffset", Vec4f( cos( mAngle ), 1.0,1.0,1.0 ) );
+	gl::drawSolidRect( getWindowBounds() );
     mBlurShader.unbind();
     
-    currentTexture.unbind();
+    gl::draw(currentSceneTex); // 쉐이더 안먹인거 덧쒸우기.
+    //currentSceneTex.disable();
     
     
     //params::InterfaceGl::draw();

@@ -1,83 +1,42 @@
-uniform float sigma; // 가우스 함수에 필요한 시그마 밸류, 블러 값을 조절
-uniform float blurSize; // 일반적으로 가로블러 1.0f / texture_pixel_width
-                        // 세로블러 1.0f / texture_pixel_height
+#version 110
 
-uniform sampler2D blurSampler; // 텍스쳐는 이 셰이더에 의하여 블러가 된당.
+uniform sampler2D tex0;
+uniform vec2 sampleOffset;
 
+float weights[21];
 
-const float pi = 3.14159265f;
-
-
-
-
-
-#if defined(VERTICAL_BLUR_9)
-const float numBlurPixelsPerSide = 4.0f;
-const vec2  blurMultiplyVec      = vec2(0.0f, 1.0f);
-#elif defined(HORIZONTAL_BLUR_9)
-const float numBlurPixelsPerSide = 4.0f;
-const vec2  blurMultiplyVec      = vec2(1.0f, 0.0f);
-#elif defined(VERTICAL_BLUR_7)
-const float numBlurPixelsPerSide = 3.0f;
-const vec2  blurMultiplyVec      = vec2(0.0f, 1.0f);
-#elif defined(HORIZONTAL_BLUR_7)
-const float numBlurPixelsPerSide = 3.0f;
-const vec2  blurMultiplyVec      = vec2(1.0f, 0.0f);
-#elif defined(VERTICAL_BLUR_5)
-const float numBlurPixelsPerSide = 2.0f;
-const vec2  blurMultiplyVec      = vec2(0.0f, 1.0f);
-#elif defined(HORIZONTAL_BLUR_5)
-const float numBlurPixelsPerSide = 2.0f;
-const vec2  blurMultiplyVec      = vec2(1.0f, 0.0f);
-#else
-
-// This only exists to get this shader to compile when no macros are defined
-
-const float numBlurPixelsPerSide = 0.0f;
-const vec2  blurMultiplyVec      = vec2(0.0f, 0.0f);
-
-#endif
+void main()
+{
+	weights[0] = 0.0091679276560113852;
+	weights[1] = 0.014053461291849008;
+	weights[2] = 0.020595286319257878;
+	weights[3] = 0.028855245532226279;
+	weights[4] = 0.038650411513543079;
+	weights[5] = 0.049494378859311142;
+	weights[6] = 0.060594058578763078;
+	weights[7] = 0.070921288047096992;
+	weights[8] = 0.079358891804948081;
+	weights[9] = 0.084895951965930902;
+	weights[10] = 0.086826196862124602;
+	weights[11] = 0.084895951965930902;
+	weights[12] = 0.079358891804948081;
+	weights[13] = 0.070921288047096992;
+	weights[14] = 0.060594058578763092;
+	weights[15] = 0.049494378859311121;
+	weights[16] = 0.0386504115135431;
+	weights[17] = 0.028855245532226279;
+	weights[18] = 0.020595286319257885;
+	weights[19] = 0.014053461291849008;
+	weights[20] = 0.00916792765601138;
 
 
-void main() {
-
-
-  // Incremental Gaussian Coefficent Calculation (See GPU Gems 3 pp. 877 - 889)
-
-  vec3 incrementalGaussian;
-
-  incrementalGaussian.x = 1.0f / (sqrt(2.0f * pi) * sigma);
-  incrementalGaussian.y = exp(-0.5f / (sigma * sigma));
-  incrementalGaussian.z = incrementalGaussian.y * incrementalGaussian.y;
-
-
-  vec4 avgValue = vec4(0.0f, 0.0f, 0.0f, 0.0f);
-  float coefficientSum = 0.0f;
-
-
-  // Take the central sample first...
-
-  avgValue += texture2D(blurSampler, gl_TexCoord[0].xy) * incrementalGaussian.x;
-  coefficientSum += incrementalGaussian.x;
-  incrementalGaussian.xy *= incrementalGaussian.yz;
-
-
-  // Go through the remaining 8 vertical samples (4 on each side of the center)
-
-  for (float i = 1.0f; i <= numBlurPixelsPerSide; i++) {
-  
-    avgValue += texture2D(blurSampler, gl_TexCoord[0].xy - i * blurSize *
-                          blurMultiplyVec) * incrementalGaussian.x;
-
-    avgValue += texture2D(blurSampler, gl_TexCoord[0].xy + i * blurSize *
-                          blurMultiplyVec) * incrementalGaussian.x;
-    
-    coefficientSum += 2 * incrementalGaussian.x;
-    incrementalGaussian.xy *= incrementalGaussian.yz;
-
-  }
-
-
-  gl_FragColor = avgValue / coefficientSum;
-
+	vec3 sum = vec3( 0.0, 0.0, 0.0 );
+	vec2 baseOffset = -10.0 * sampleOffset;
+	vec2 offset = vec2( 0.0, 0.0 );
+	for( int s = 0; s < 21; ++s ) {
+		sum += texture2D( tex0, gl_TexCoord[0].st + baseOffset + offset ).rgb * weights[s];
+		offset += sampleOffset;
+	}
+	gl_FragColor.rgb = sum;
+	gl_FragColor.a = 1.0;
 }
