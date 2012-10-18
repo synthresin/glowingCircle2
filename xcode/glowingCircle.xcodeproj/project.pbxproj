@@ -19,6 +19,8 @@
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		C6BF7E5D162FC044000EF357 /* blurVs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C6BF7E5C162FC044000EF357 /* blurVs.glsl */; };
+		C6BF7E60162FC050000EF357 /* blurFs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C6BF7E5F162FC050000EF357 /* blurFs.glsl */; };
 		C6CF5BFA15EC736D004CBA5E /* globe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CF5BF815EC736D004CBA5E /* globe.cpp */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* glowingCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glowingCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6BF7E5C162FC044000EF357 /* blurVs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = blurVs.glsl; path = ../resources/blurVs.glsl; sourceTree = "<group>"; };
+		C6BF7E5F162FC050000EF357 /* blurFs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blurFs.glsl; sourceTree = "<group>"; };
 		C6CF5BF815EC736D004CBA5E /* globe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globe.cpp; sourceTree = "<group>"; };
 		C6CF5BF915EC736D004CBA5E /* globe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6BF7E5C162FC044000EF357 /* blurVs.glsl */,
+				C6BF7E5F162FC050000EF357 /* blurFs.glsl */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
+				C6BF7E5D162FC044000EF357 /* blurVs.glsl in Resources */,
+				C6BF7E60162FC050000EF357 /* blurFs.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

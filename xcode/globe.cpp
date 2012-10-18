@@ -30,7 +30,7 @@ Globe::Globe(ci::Vec3f center, float radius) {
 }
 
 void Globe::update() {
-    if (mLive) {
+    if (mLive) {  
         if(mRadius > 500 && mAscend) {
             mAscend = false;
         } else if (mRadius < 200 && !mAscend) {

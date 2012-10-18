@@ -461,11 +461,12 @@ dependencies: \
   ../../../include/cinder/app/ResizeEvent.h \
   ../../../include/cinder/Timer.h ../../../include/cinder/Function.h \
   ../../../include/cinder/app/TouchEvent.h \
-  ../../../include/cinder/Camera.h \
+  ../../../include/cinder/gl/Fbo.h ../../../include/cinder/gl/Texture.h \
+  ../../../include/cinder/gl/GlslProg.h ../../../include/cinder/Camera.h \
   ../../../include/cinder/params/Params.h \
   ../../../include/cinder/qtime/MovieWriter.h \
   ../../../include/cinder/qtime/QuickTime.h \
-  ../../../include/cinder/gl/Texture.h ../../../include/cinder/Thread.h \
+  ../../../include/cinder/Thread.h \
   ../../../include/cinder/cocoa/CinderCocoa.h \
   ../../../include/cinder/ImageIo.h ../../../include/cinder/DataTarget.h \
   ../../../boost/boost/thread/mutex.hpp \
@@ -769,6 +770,5 @@ dependencies: \
   ../../../boost/boost/math/special_functions/fpclassify.hpp \
   ../../../boost/boost/math/tools/real_cast.hpp \
   ../../../boost/boost/detail/lcast_precision.hpp \
-  ../../../include/cinder/gl/Fbo.h \
   /Users/synthresin/Desktop/cinder/apps/glowingCircle2/xcode/globe.h \
   ../../../include/cinder/Perlin.h
